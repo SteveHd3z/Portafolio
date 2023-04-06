@@ -42,8 +42,8 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Menu*/
 
 .tudo{
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
 .menu{
@@ -55,6 +55,7 @@ section.menu{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 1rem;
 }
 
 header img{
@@ -90,17 +91,14 @@ section.title{
     display: flex;
     align-items: center;
     height: 400px;
-    padding: 2rem;
     margin-top: 2rem;
-}
-
-.title__div{
-    align-items: center;
 }
 
 .title__bio{
     font-size: 48px;
     line-height: 61px;
+    color: var(--cor-de-link);
+    font-weight: 700;
 }
 
 .title__subsection{
@@ -126,6 +124,10 @@ section.title{
 /*Sección About*/
 
 section.about{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
