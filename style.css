@@ -45,7 +45,7 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
-.tudo section:not(#sobre-mi){
+.tudo section:not(#sobre-mi,#formacion){
     padding: 0 10rem 0 10rem;
 }
 
@@ -148,21 +148,26 @@ section.about{
     line-height: 19px;
 }
 
-/*Seccion skills*/
+/*Seccion skills and Hobbies*/
 
-.skills__title, .hobbies__title{
+.skills__title,
+.hobbies__title,
+.academic__title{
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.skills__line, .hobbies__line{
+.skills__line,
+.hobbies__line{
     display: flex;
     justify-content: space-between;  
     flex-wrap: wrap;
+    margin-bottom: 2.5rem;
 }
 
-.skills__box, .hobbies__box{
+.skills__box,
+.hobbies__box{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -175,26 +180,45 @@ section.about{
 }
 
 
-.skills__box>ul, .hobbies__box>ul{      /*Accede al primer elemento que se encuentre despues de la clase*/
+.skills__box>ul,
+.hobbies__box>ul{      /*Accede al primer elemento que se encuentre despues de la clase*/
     padding-left: 1.5rem;
 }
 
-.skills__img>img, .hobbies__img>img{
+.skills__img>img,
+.hobbies__img>img{
     margin-bottom: 1rem;
 }
 
 
-
-/*Sección Hobbies*/
-
-section.hobbies{
-    
-}
-
 /* Experiencia Académica*/
 
-section.academic{
+.academic{
+    background-color: var(--secundario);
+    width: auto;
+    height: auto;
+    padding: 5rem;
+}
 
+.academic__courses{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.academic__courses__item__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-box);
+    width: 23rem;
+    height: 17rem;
+}
+
+.academic__courses__item__img>img{
+    width: 12rem;
+    height: 8rem;
 }
 
 /* experiencia*/
