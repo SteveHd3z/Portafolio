@@ -150,35 +150,38 @@ section.about{
 
 /*Seccion skills*/
 
-.skills__title{
+.skills__title, .hobbies__title{
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.skills__line{
+.skills__line, .hobbies__line{
     display: flex;
     justify-content: space-between;  
     flex-wrap: wrap;
 }
 
-.skills__box{
+.skills__box, .hobbies__box{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     background-color: var(--color-box);
     font-weight: 700;
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     margin-bottom: 2rem;
 }
 
-.skills__img{
-    width: 2.5rem;
-    height: 2.5rem;
+
+.skills__box>ul, .hobbies__box>ul{      /*Accede al primer elemento que se encuentre despues de la clase*/
+    padding-left: 1.5rem;
 }
 
+.skills__img>img, .hobbies__img>img{
+    margin-bottom: 1rem;
+}
 
 
 
