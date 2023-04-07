@@ -11,6 +11,7 @@ coloque nas sessões indicadas*/
    --cor-de-link: #272626;
    --secundario: #EAF2FD;
    --color-text:#464646;
+   --color-box:#FFFFFF;
 }
 
 body {
@@ -146,6 +147,40 @@ section.about{
     font-size: 16px;
     line-height: 19px;
 }
+
+/*Seccion skills*/
+
+.skills__title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.skills__line{
+    display: flex;
+    justify-content: space-between;  
+    flex-wrap: wrap;
+}
+
+.skills__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: var(--color-box);
+    font-weight: 700;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
+.skills__img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+
 
 /*Sección Hobbies*/
 
