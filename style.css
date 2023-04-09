@@ -152,7 +152,8 @@ section.about{
 
 .skills__title,
 .hobbies__title,
-.academic__title{
+.academic__title,
+.experience__section__title{
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
@@ -197,13 +198,17 @@ section.about{
     background-color: var(--secundario);
     width: auto;
     height: auto;
-    padding: 5rem;
+    padding: 5rem 10rem;
 }
 
 .academic__courses{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.academic__courses__list{
+    padding-left: 0;
 }
 
 .academic__courses__item__img{
@@ -212,7 +217,7 @@ section.about{
     align-items: center;
     justify-content: center;
     background-color: var(--color-box);
-    width: 23rem;
+    width: 20rem;
     height: 17rem;
 }
 
@@ -223,8 +228,30 @@ section.about{
 
 /* experiencia*/
 
-section.experience{
+.experience{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
 
+.experience__box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:4rem;
+    margin: 2rem 0 4rem 0;
+}
+
+.experience__img{
+    width: 72%;
+}
+
+.experience__box:nth-child(2n-1){
+    flex-direction: row-reverse;
+}
+
+.experience__info{
+    max-width: 15rem;
 }
 
 /*Contacto*/
