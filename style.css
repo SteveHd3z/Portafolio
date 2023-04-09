@@ -12,6 +12,7 @@ coloque nas sessões indicadas*/
    --secundario: #EAF2FD;
    --color-text:#464646;
    --color-box:#FFFFFF;
+   --color-btn:#2A7AE4;
 }
 
 body {
@@ -249,9 +250,43 @@ section.about{
 .experience__box:nth-child(2n-1){
     flex-direction: row-reverse;
 }
+/*Recorre los experiece box y aplica a sus elementos que estan el flex el estilo reverse
+ a fin de invertir los elementos y lograr el diseño*/
 
 .experience__info{
     max-width: 15rem;
+    height: auto;
+}
+
+.experiencia__botao--repo{
+    line-height: 18.78px;
+    font-weight: 400;
+    font-size: 1rem;
+    height: 51px;
+    width:auto;
+    padding: 10px;
+    margin-right: 1rem;
+    color:var(--color-btn);
+    border-color: var(--color-btn);
+
+}
+
+.experience__botao--demo{
+    line-height: 18.78px;
+    font-weight: 400;
+    font-size: 1rem;
+    height: 51px;
+    width: 105px;
+    padding: 10px;
+    color: var(--color-box);
+    background-color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+
+}
+
+.experiencia__botao--repo:hover,
+.experience__botao--demo:hover{
+    cursor: pointer;
 }
 
 /*Contacto*/
