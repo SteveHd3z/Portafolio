@@ -46,7 +46,7 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
-.tudo section:not(#sobre-mi,#formacion){
+.tudo section:not(#sobre-mi,#formacion,#contacto){
     padding: 0 10rem 0 10rem;
 }
 
@@ -96,6 +96,11 @@ section.title{
     align-items: center;
     height: auto;
     margin: 2rem 0;
+}
+
+.title__profile{
+    border-radius: 50%;
+    height: 28rem;
 }
 
 .title__bio{
@@ -285,20 +290,99 @@ section.about{
 }
 
 .experiencia__botao--repo:hover,
-.experience__botao--demo:hover{
+.experience__botao--demo:hover,
+.formcontato__botao{
     cursor: pointer;
 }
 
 /*Contacto*/
 
 section.formcontato{
+    background-color: var(--secundario);
+    padding: 5rem 10rem;
+}
 
+.formcontato__contacto{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.formcontato__text{
+    height: 37rem;
+}
+
+
+
+.formcontato__title{
+    font-size: 2rem;
+    margin: 0;
+}
+
+.formcontato__subtext{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.formcontato__input{
+    height: 3rem;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--cor-de-fundo) ;   
+
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.form__label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7c7;
+
+}
+
+.formcontato__textarea{
+    height: 133px;
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    font-size: 16px;
+    font-family: 'Raleway';
+}
+
+.formcontato__botao{
+    line-height: 18.78px;
+    font-weight: 400;
+    font-size: 1rem;
+    height: 51px;
+    width: 144px;
+    padding: 10px;
+    color: var(--color-box);
+    background-color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+    margin-top: 1rem;
 }
 
 /*footeer*/
 
 section.footer{
-   
+    padding: 1rem;
+    margin: 0 auto; 
+    text-align: center;  
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -323,7 +407,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (min-width: 480px) {
 
 /*Menu*/
 
