@@ -13,6 +13,7 @@ coloque nas sessões indicadas*/
    --color-text:#464646;
    --color-box:#FFFFFF;
    --color-btn:#2A7AE4;
+   --warning-color: #df2525;
 }
 
 body {
@@ -302,6 +303,8 @@ section.formcontato{
     padding: 5rem 10rem;
 }
 
+
+
 .formcontato__contacto{
     display: flex;
     flex-wrap: wrap;
@@ -331,15 +334,19 @@ section.formcontato{
 
 /*Estilos y animaciones a los input y label tipo google*/
 
-.field__holder{
+.input__container, .textarea__container{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
 }
 
 input{
     height: 3rem;
     width: 100%;
     border-radius: 4px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border: 0;
     outline: none;
     font-size: 16px;
@@ -347,6 +354,62 @@ input{
     line-height: 20px;
     letter-spacing: 0px;
     text-align: left;
+    color: var(--color-text);
+}
+
+/*Asignacion de estilos para validaciones*/
+/*Inputs*/
+
+
+.input__container--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.input__container--invalid .formcontato__input{
+    border-bottom: 1px solid var(--warning-color);
+    border-radius: 7px;
+    margin-bottom: 0.4rem;
+}
+
+.input__container--invalid .input__label {
+    color: var(--warning-color);
+}
+
+.input__message--error {
+    display: none;
+}
+
+.input__container--invalid  .input__message--error {
+    color: var(--warning-color);
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+
+/*Textarea*/
+
+.textarea__container--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.textarea__container--invalid .formcontato__textarea {
+    border-bottom: 1px solid var(--warning-color);
+}
+
+.textarea__container--invalid .textarea__label {
+    color: var(--warning-color);
+}
+
+.textarea__message--error {
+    display: none;
+}
+
+.textarea__container--invalid .textarea__message--error {
+    display: block;
+    color: var(--warning-color);
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 label{
