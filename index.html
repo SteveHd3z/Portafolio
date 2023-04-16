@@ -243,26 +243,32 @@
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
                     <form class="formcontato__form" name="form">
 
-                        <div class="field__holder">
-                            <input class="formcontato__input" type="text" name="nombre" id="name" placeholder=" "> <!--Important with space-->
-                            <label for="name">Nombre</label>
-                        </div>
+                        <container class="input__container">
+                            <input class="formcontato__input" type="text" name="nombre" id="name" placeholder=" " data-type="name" required> <!--Important with space-->
+                            <label for="name" class="input__label">Nombre</label>
+                            <span class="input__message--error"></span>
+                        </container>
                         
-                        <div class="field__holder">
-                            <input class="formcontato__input" type="email" name="email" id="email" placeholder=" ">
-                            <label for="email">Email</label>
-                        </div>
+                        <container class="input__container">
+                            <input class="formcontato__input" type="email" name="email" id="email" placeholder=" " data-type="email" required>
+                            <label for="email" class="input__label">Email</label>
+                            <span class="input__message--error"></span>
+                        </container>
                         
-                        <div class="field__holder">
-                            <input class="formcontato__input" type="text" name="asunto" id="asunto" placeholder=" ">
-                            <label for="asunto">Asunto</label>
-                        </div>
+                        <container class="input__container">
+                            <input class="formcontato__input" type="text" name="asunto" id="asunto" placeholder=" " data-type="subject" required>
+                            <label for="asunto" class="input__label">Asunto</label>
+                            <span class="input__message--error"></span>
+                        </container>
                         
-                        <div class="field__holder">
-                            <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" id="mensaje" placeholder=" "></textarea>
-                            <label for="mensaje">Mensaje</label>
-                        </div>                        
+                        <container class="textarea__container">
+                            <textarea class="formcontato__textarea" rows="5" cols="40" id="mensaje" name="mensaje" id="mensaje" placeholder=" " data-type="msn" required></textarea>
+                            <label for="mensaje" class="textarea__label">Mensaje</label>
+                            <span class="textarea__message--error"></span>
+                        </container> 
+
                         <button type="submit" class="formcontato__botao">Enviar mensaje</button>
+
                     </form>
                 </div>
             </div>
@@ -277,7 +283,7 @@
         </section>
     
  <!-- Script del documento JavaScript -->
-<script src="validacion.js"></script>
+<script src="./js/app.js" type="module"></script>
 
 </body>
 
