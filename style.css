@@ -342,7 +342,7 @@ section.formcontato{
     box-sizing: border-box;
 }
 
-input{
+input:not(#button){
     height: 3rem;
     width: 100%;
     border-radius: 4px;
