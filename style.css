@@ -54,6 +54,7 @@ https://en.bem.info/methodology/quick-start/*/
 .menu{
     width: 90%;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 section.menu{
@@ -85,9 +86,13 @@ header img{
     margin-left: 2rem;
 }
 
-.menu__list__item--contacto{
+.menu__list__item:nth-child(6n){
     font-weight: bold;
     margin-left: 2rem;
+}
+
+.menu__list__item--contato{
+    display: none;
 }
 
 /*Sección Title*/
@@ -97,6 +102,11 @@ section.title{
     align-items: center;
     height: auto;
     margin: 2rem 0;
+}
+
+.title__div{
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .title__profile{
@@ -164,6 +174,7 @@ section.about{
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
+    line-height: 26px;
 }
 
 .skills__line,
@@ -229,7 +240,7 @@ section.about{
 }
 
 .academic__courses__item__img>img{
-    width: 12rem;
+    width: auto;
     height: 8rem;
 }
 
@@ -303,8 +314,6 @@ section.formcontato{
     padding: 5rem 10rem;
 }
 
-
-
 .formcontato__contacto{
     display: flex;
     flex-wrap: wrap;
@@ -322,7 +331,7 @@ section.formcontato{
 
 .formcontato__title{
     font-size: 2rem;
-    margin: 0;
+    margin: 0 0 2rem 0;
 }
 
 .formcontato__subtext{
@@ -334,19 +343,21 @@ section.formcontato{
 
 /*Estilos y animaciones a los input y label tipo google*/
 
+
 .input__container, .textarea__container{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
+    margin-bottom: 1rem;
 }
 
 input:not(#button){
     height: 3rem;
     width: 100%;
     border-radius: 4px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: 0;
     outline: none;
     font-size: 16px;
@@ -365,8 +376,7 @@ input:not(#button){
     margin-bottom: 0.5rem;
 }
 
-.input__container--invalid .formcontato__input{
-    border-bottom: 1px solid var(--warning-color);
+.input__container--invalid .formcontato__input{    
     border-radius: 7px;
     margin-bottom: 0.4rem;
 }
@@ -393,10 +403,6 @@ input:not(#button){
     margin-bottom: 0.5rem;
 }
 
-.textarea__container--invalid .formcontato__textarea {
-    border-bottom: 1px solid var(--warning-color);
-}
-
 .textarea__container--invalid .textarea__label {
     color: var(--warning-color);
 }
@@ -408,6 +414,7 @@ input:not(#button){
 .textarea__container--invalid .textarea__message--error {
     display: block;
     color: var(--warning-color);
+    font-size: 14px;
     margin-top: 0.5rem;
     padding-left: 0.5rem;
 }
@@ -476,7 +483,10 @@ textarea:focus-visible+label{
 section.footer{
     padding: 1rem;
     margin: 0 auto; 
-    text-align: center;  
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;  
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -484,19 +494,190 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (max-width:768px){
 
-/* Menú */
+    .tudo section:not(#sobre-mi,#formacion,#contacto){
+        padding: 0 2rem 0 2rem;
+    }
 
-/*title*/
+    /* Menú */
 
-/*Skills*/
+    .menu__list{
+        display: none;
+    }
 
-/*Hobbies*/
+    .menu__list__item--contato{
+        display: block;
+        font-weight: bold;
+        margin-left: 2rem;
+    }
+
+    /*title*/
+
+    .title__div{
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .title__profile{
+        width: 20%;
+        height: 100%;
+    }
+
+    .title__container{
+        width: 90%;
+    }
+
+    .title__bio{
+        font-size: 25px;
+        line-height: 26px;
+    }
+
+    .title__subsection{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .title__network{
+        margin-top: 0;
+    }
+
+    /*About*/
+
+    section.about{
+        padding:2rem;
+    }
+
+    .about__container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about__title{
+        margin-top: 0;
+        font-size: 1.3rem;
+    }
+
+    .about__paragraph{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+
+
+/*Skills && Hobbies*/
+
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title{
+    font-size: 1.3rem;
+}
+
+/*Como tenemos en el contenedor skills__line 
+un display flex, entonces podemos aplicar la propiedad
+flex-grow a los elementos a fin de que se distribuyan
+dinamicamente en la pantalla*/
+
+.skills__line,
+.hobbies__line{
+    gap: 1.5rem;
+}
+
+.skills__box
+,.hobbies__box{
+    max-width: 400px;
+    flex-grow: 1;
+}
+
+.skills__name,
+.hobbies__name{
+    font-size: 16px;
+}
 
 /*Formación Académica*/
 
+.academic{
+    padding: 1rem 2rem;
+}
+
+.academic__courses{
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.academic__courses__box{
+    width: 40%;
+    max-width: 70%;
+    flex-grow: 1;
+}
+
+.academic__courses__item__img{
+    width: 100%;
+}
+
+.academic__courses__item__subtitle{
+    font-size: 14px;
+}
+
 /*Experiencia Profesional*/
+
+.experience__box{
+    display: block;
+}
+
+.experience__img{
+    width: 100%;
+}
+
+.experience__title{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.experience__text{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*Contact*/
+
+section.formcontato{
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.formcontato__img{
+    display: none;
+}
+
+.formcontato__text{
+    width: 100%;
+}
+
+.formcontato__title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.formcontato__subtext{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.formcontato__title,
+.formcontato__subtext{
+    line-height: 10px;
+}
+
+.formcontato__input{
+    height: 3.5rem;
+}
 
 }
 
