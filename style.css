@@ -682,23 +682,108 @@ section.formcontato{
 }
 
 /*Mobile*/
-@media (min-width: 480px) {
+@media (max-width: 480px) {
+
+    .tudo section:not(#sobre-mi,#formacion,#contacto){
+        padding: 0 1rem 0 1rem;
+    }
 
 /*Menu*/
 
+section.menu{
+    align-items: baseline;
+}
+
+.menu__list__item--contato{
+    font-size: 14px;
+    font-weight: 400;
+}
 /*Titulo*/
+
+section.title{
+    margin: 1rem 0;
+}
+
+.title__div{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title__profile{
+    width: 7rem;
+    height: 7rem;
+}
+
+.title__container{
+    width: 100%;
+}
+
+.title__bio{
+    font-size: 22px;
+}
+
+.title__network{
+    margin-top: 1.5rem;
+}
+
+.title__subsection{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.title__network{
+    justify-content: space-between;
+}
+
+.title__network__item{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
 
 /*Sección sobre mi*/
 
-/*Skills*/
+section.about{
+    padding: 1rem;
+}
 
+/*Skills*/
 /*Hobbies*/
- 
+
+.skills__line,
+.hobbies__line{
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
 /*Formación Académica*/
 
-/*Experiencia Profesional*/
+section.academic{
+    padding: 1rem 2rem;
+    padding-bottom: 2rem;
+}
 
- /*Contacto*/
+.academic__courses{
+    display: block;
+}
+
+.academic__courses__box{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+}
+/*Contacto*/
+
+.formcontato__subtext{
+    line-height: 20px;
+}
 
 /*Footer*/
 
