@@ -515,6 +515,13 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     /*title*/
 
+    .title__container{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
     .title__div{
         gap: 1rem;
         align-items: center;
