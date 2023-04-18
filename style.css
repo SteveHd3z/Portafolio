@@ -682,7 +682,7 @@ section.formcontato{
 }
 
 /*Mobile*/
-@media (max-width: 480px) {
+@media screen and (max-width:480px) {
 
     .tudo section:not(#sobre-mi,#formacion,#contacto){
         padding: 0 1rem 0 1rem;
@@ -783,6 +783,11 @@ section.academic{
 
 .formcontato__subtext{
     line-height: 20px;
+}
+
+/*Experience*/
+.experience__box{
+    width: 100%;
 }
 
 /*Footer*/
