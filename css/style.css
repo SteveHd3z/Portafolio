@@ -1,0 +1,808 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #272626;
+   --secundario: #EAF2FD;
+   --color-text:#464646;
+   --color-box:#FFFFFF;
+   --color-btn:#2A7AE4;
+   --warning-color: #df2525;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;        
+    color: var(--color-text);
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+
+.tudo section:not(#sobre-mi,#formacion,#contacto){
+    padding: 0 10rem 0 10rem;
+}
+
+.menu{
+    width: 90%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section.menu{
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 1rem;
+}
+
+header img{
+    height: 16px;
+    width: 16px; 
+    margin-right: 10px;
+}
+
+.menu__header{
+    display: flex;
+    width: auto;
+    align-items: center;
+    font-size: 16px;
+}
+
+.menu__list{
+    display: flex;
+    flex-direction: end;
+}
+
+.menu__list__item{
+    margin-left: 2rem;
+}
+
+.menu__list__item:nth-child(6n){
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+.menu__list__item--contato{
+    display: none;
+}
+
+/*Sección Title*/
+
+section.title{
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: auto;
+    margin: 2rem 0;
+}
+
+.title__div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.title__profile{
+    border-radius: 50%;
+    height: 28rem;
+}
+
+.title__bio{
+    font-size: 48px;
+    line-height: 61px;
+    font-weight: 700;
+}
+
+.title__subsection{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.title__profile{
+    float: right;
+}
+
+.title__network{
+    display: flex;
+    padding: 0;
+    margin-top: 4rem;
+}
+
+.title__network__item{
+    margin-right: 3rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/*Sección About*/
+
+section.about{
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secundario);
+    margin: 0;
+    height: auto;
+    padding: 4rem 10rem;
+}
+
+.about__title{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.about__paragraph{
+    width: 46rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/*Seccion skills and Hobbies*/
+
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.skills__line,
+.hobbies__line{
+    display: flex;
+    justify-content: space-between;  
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.skills__box,
+.hobbies__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: var(--color-box);
+    font-weight: 700;
+    width: 11rem;
+    height: 11rem;
+    margin-bottom: 2rem;
+}
+
+
+.skills__box>ul,
+.hobbies__box>ul{      /*Accede al primer elemento que se encuentre despues de la clase*/
+    padding-left: 1.5rem;
+}
+
+.skills__img>img,
+.hobbies__img>img{
+    margin-bottom: 1rem;
+}
+
+
+/* Experiencia Académica*/
+
+.academic{
+    background-color: var(--secundario);
+    width: auto;
+    height: auto;
+    padding: 5rem 10rem;
+}
+
+.academic__courses{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.academic__courses__list{
+    padding-left: 0;
+}
+
+.academic__courses__item__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-box);
+    width: 20rem;
+    height: 17rem;
+}
+
+.academic__courses__item__img>img{
+    width: auto;
+    height: 8rem;
+}
+
+/* experiencia*/
+
+.experience{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.experience__box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:4rem;
+    margin: 2rem 0 4rem 0;
+}
+
+.experience__img{
+    width: 72%;
+}
+
+.experience__box:nth-child(2n-1){
+    flex-direction: row-reverse;
+}
+/*Recorre los experiece box y aplica a sus elementos que estan el flex el estilo reverse
+ a fin de invertir los elementos y lograr el diseño*/
+
+.experience__info{
+    max-width: 15rem;
+    height: auto;
+}
+
+.experiencia__botao--repo{
+    line-height: 18.78px;
+    font-weight: 400;
+    font-size: 1rem;
+    height: 51px;
+    width:auto;
+    padding: 10px;
+    margin-right: 1rem;
+    color:var(--color-btn);
+    border-color: var(--color-btn);
+
+}
+
+.experience__botao--demo{
+    line-height: 18.78px;
+    font-weight: 400;
+    font-size: 1rem;
+    height: 51px;
+    width: 105px;
+    padding: 10px;
+    color: var(--color-box);
+    background-color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+
+}
+
+.experiencia__botao--repo:hover,
+.experience__botao--demo:hover,
+.formcontato__botao{
+    cursor: pointer;
+}
+
+/*Contacto*/
+
+section.formcontato{
+    background-color: var(--secundario);
+    padding: 5rem 10rem;
+}
+
+.formcontato__contacto{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.formcontato__img{
+    width: 100%;
+    height: 100%;
+}
+
+.formcontato__text{
+    width: 600px;
+}
+
+.formcontato__title{
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+}
+
+.formcontato__subtext{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+}
+
+/*Estilos y animaciones a los input y label tipo google*/
+
+
+.input__container, .textarea__container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+input:not(#button){
+    height: 3rem;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--color-text);
+}
+
+/*Asignacion de estilos para validaciones*/
+/*Inputs*/
+
+
+.input__container--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.input__container--invalid .formcontato__input{    
+    border-radius: 7px;
+    margin-bottom: 0.4rem;
+}
+
+.input__container--invalid .input__label {
+    color: var(--warning-color);
+}
+
+.input__message--error {
+    display: none;
+}
+
+.input__container--invalid  .input__message--error {
+    color: var(--warning-color);
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+
+/*Textarea*/
+
+.textarea__container--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.textarea__container--invalid .textarea__label {
+    color: var(--warning-color);
+}
+
+.textarea__message--error {
+    display: none;
+}
+
+.textarea__container--invalid .textarea__message--error {
+    display: block;
+    color: var(--warning-color);
+    font-size: 14px;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #424242;
+    display: flex;
+    align-items: center;
+    cursor: text;
+    transition: all .3s ease;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    height: 55px;
+}
+
+input:focus + label,/*Accede al label cuando se hace click en el input*/
+input:not(:placeholder-shown)+label,/*Mantiene el placeholder statico en el label si se ingresa info en el input*/
+textarea:focus + label,
+textarea:not(:placeholder-shown)+label{
+    color:var(--color-text);
+    font-size: .75rem;
+    top: -25px;
+    pointer-events: none; 
+}
+
+input:focus,textarea:focus{
+    border-bottom: 3px solid var(--color-btn); 
+}
+
+input:focus-visible+label,
+textarea:focus-visible+label{
+    color: var(--color-btn);
+    /*aplica color al label mientras se selecciona el input*/
+}
+
+.formcontato__textarea{
+    height: 133px;
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    padding-top: 1rem;
+    font-family: 'Raleway';
+}
+
+.formcontato__botao{
+    line-height: 18.78px;
+    font-weight: 400;
+    font-size: 1rem;
+    height: 51px;
+    width: 144px;
+    padding: 10px;
+    color: var(--color-box);
+    background-color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+    margin-top: 1rem;
+}
+
+/*footeer*/
+
+section.footer{
+    padding: 1rem;
+    margin: 0 auto; 
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;  
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media screen and (max-width:768px){
+
+    .tudo section:not(#sobre-mi,#formacion,#contacto){
+        padding: 0 2rem 0 2rem;
+    }
+
+    /* Menú */
+
+    .menu__list{
+        display: none;
+    }
+
+    .menu__list__item--contato{
+        display: block;
+        font-weight: bold;
+        margin-left: 2rem;
+    }
+
+    /*title*/
+
+    .title__container{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .title__div{
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .title__profile{
+        width: 30%;
+        height: 100%;
+    }
+
+    .title__container{
+        width: 70%;
+    }
+
+    .title__bio{
+        font-size: 25px;
+        line-height: 26px;
+    }
+
+    .title__subsection{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .title__network{
+        margin-top: 0;
+    }
+
+    /*About*/
+
+    section.about{
+        padding:2rem;
+    }
+
+    .about__container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about__title{
+        margin-top: 0;
+        font-size: 1.3rem;
+    }
+
+    .about__paragraph{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+
+
+/*Skills && Hobbies*/
+
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title{
+    font-size: 1.3rem;
+}
+
+/*Como tenemos en el contenedor skills__line 
+un display flex, entonces podemos aplicar la propiedad
+flex-grow a los elementos a fin de que se distribuyan
+dinamicamente en la pantalla*/
+
+.skills__line,
+.hobbies__line{
+    gap: 1.5rem;
+}
+
+.skills__box
+,.hobbies__box{
+    max-width: 400px;
+    flex-grow: 1;
+}
+
+.skills__name,
+.hobbies__name{
+    font-size: 16px;
+}
+
+/*Formación Académica*/
+
+.academic{
+    padding: 1rem 2rem;
+}
+
+.academic__courses{
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.academic__courses__box{
+    width: 40%;
+    max-width: 70%;
+    flex-grow: 1;
+}
+
+.academic__courses__item__img{
+    width: 100%;
+}
+
+.academic__courses__item__subtitle{
+    font-size: 14px;
+}
+
+/*Experiencia Profesional*/
+
+.experience__box{
+    display: block;
+}
+
+.experience__img{
+    width: 100%;
+}
+
+.experience__title{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.experience__text{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*Contact*/
+
+section.formcontato{
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.formcontato__img{
+    display: none;
+}
+
+.formcontato__text{
+    width: 100%;
+}
+
+.formcontato__title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.formcontato__subtext{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.formcontato__title,
+.formcontato__subtext{
+    line-height: 10px;
+}
+
+.formcontato__input{
+    height: 3.5rem;
+}
+
+}
+
+/*Mobile*/
+@media screen and (max-width:480px) {
+
+    .tudo section:not(#sobre-mi,#formacion,#contacto){
+        padding: 0 1rem 0 1rem;
+    }
+
+/*Menu*/
+
+section.menu{
+    align-items: baseline;
+}
+
+.menu__list__item--contato{
+    font-size: 14px;
+    font-weight: 400;
+}
+/*Titulo*/
+
+section.title{
+    margin: 1rem 0;
+}
+
+.title__div{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title__profile{
+    width: 7rem;
+    height: 7rem;
+}
+
+.title__container{
+    width: 100%;
+}
+
+.title__bio{
+    font-size: 22px;
+}
+
+.title__network{
+    margin-top: 1.5rem;
+}
+
+.title__subsection{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.title__network{
+    justify-content: space-between;
+}
+
+.title__network__item{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+/*Sección sobre mi*/
+
+section.about{
+    padding: 1rem;
+}
+
+/*Skills*/
+/*Hobbies*/
+
+.skills__line,
+.hobbies__line{
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/*Formación Académica*/
+
+section.academic{
+    padding: 1rem 2rem;
+    padding-bottom: 2rem;
+}
+
+.academic__courses{
+    display: block;
+}
+
+.academic__courses__box{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+}
+/*Contacto*/
+
+.formcontato__subtext{
+    line-height: 20px;
+}
+
+/*Experience*/
+.experience__box{
+    width: 100%;
+}
+
+/*Footer*/
+
+}
