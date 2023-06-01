@@ -511,6 +511,11 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     /* Menú */
 
+    .menu__title,
+    .menu__list__item--contato{
+        font-size: 16px;
+    }
+
     section.menu,section.title{
         padding: 0 2rem 0 2rem;
     }
@@ -522,7 +527,7 @@ Utiliza las referencias de los breakpoints @media abajo */
     .menu__list__item--contato{
         display: block;
         font-weight: bold;
-        margin-left: 2rem;
+        margin-left: 2rem;        
     }
 
     /*title*/
@@ -727,16 +732,12 @@ section.formcontato{
 }
 
 /*Mobile*/
-@media screen and (max-width:360px) {
-
-    .tudo section:not(#sobre-mi,#formacion,#contacto){
-        padding: 0 1rem 0 1rem;
-    }
+@media screen and (max-width:480px) {
 
 /*Menu*/
 
 section.menu{
-    align-items: baseline;
+    margin-top: 0;
 }
 
 .menu__list__item--contato{
@@ -746,7 +747,7 @@ section.menu{
 /*Titulo*/
 
 section.title{
-    margin: 1rem 0;
+    margin-bottom: 3rem;
 }
 
 .title__div{
@@ -757,6 +758,7 @@ section.title{
 .title__profile{
     width: 7rem;
     height: 7rem;
+    margin-bottom: 1rem;
 }
 
 .title__container{
@@ -782,6 +784,7 @@ section.title{
 
 .title__network{
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 .title__network__item{
@@ -799,8 +802,17 @@ section.about{
     padding: 1rem;
 }
 
+.about__container{
+    width: 80%;
+}
+
 /*Skills*/
 /*Hobbies*/
+
+section.skills,
+section.hobbies{
+    padding: 0 1rem;
+}
 
 .skills__line,
 .hobbies__line{
@@ -831,10 +843,19 @@ section.academic{
 }
 
 /*Experience*/
+
+section.experience{
+    padding: 1rem 2rem;
+}
+
 .experience__box{
     width: 100%;
 }
 
 /*Footer*/
+
+section.formcontato{
+    padding-left: 0;
+}
 
 }
