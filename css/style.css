@@ -54,7 +54,6 @@ https://en.bem.info/methodology/quick-start/*/
 .menu{
     width: 90%;
     align-items: center;
-    flex-wrap: wrap;
     padding: 0 8rem 0 8rem;
 }
 
@@ -99,22 +98,25 @@ header img{
 /*Sección Title*/
 
 section.title{
-    display: flex;
-    align-items: center;
-    height: auto;
-    width: auto;
     margin: 2rem 0;
     padding: 0 8rem 0 8rem;
+}
+
+.title__container{
+    width: 751px;
 }
 
 .title__div{
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title__profile{
     border-radius: 50%;
-    height: 28rem;
+    height: 370px;
+    width: auto;
 }
 
 .title__bio{
@@ -738,6 +740,7 @@ section.formcontato{
 
 section.menu{
     margin-top: 0;
+    padding: 0 1rem;
 }
 
 .menu__list__item--contato{
