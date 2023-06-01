@@ -748,8 +748,8 @@ section.menu{
 
 section.title{
     height: 294px;
-    padding-top: 0;
-    margin-bottom: 1rem;
+    align-items: baseline;
+    padding: 1rem;
 }
 
 .title__div{
