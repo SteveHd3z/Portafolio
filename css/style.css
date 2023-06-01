@@ -732,7 +732,7 @@ section.formcontato{
 }
 
 /*Mobile*/
-@media screen and (max-width:600px) {
+@media screen and (max-width:480px) {
 
 /*Menu*/
 
@@ -747,7 +747,9 @@ section.menu{
 /*Titulo*/
 
 section.title{
-    margin-bottom: 3rem;
+    height: 294px;
+    padding-top: 0;
+    margin-bottom: 1rem;
 }
 
 .title__div{
@@ -802,8 +804,8 @@ section.about{
     padding: 1rem;
 }
 
-.about__container{
-    width: 80%;
+.about__title{
+    margin-bottom: 1rem;
 }
 
 /*Skills*/
