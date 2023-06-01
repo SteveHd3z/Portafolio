@@ -862,13 +862,9 @@ section.formcontato{
 
 }
 
-@media screen and (max-width:393px) {
+@media screen and (max-width:420px) {
 
     section.title{
         height: 330px;
     }
-
-
-
-
 }
